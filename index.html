@@ -29,7 +29,12 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="51">
+<body data-spy="scroll" data-target=".navbar" data-offset="51" >
+
+    <audio id="player" autoplay controls hidden>
+        <source src="isalang.mp3" type="audio/mp3">
+    </audio>
+
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
@@ -67,7 +72,7 @@
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">COUPLES WHO LAUGH TOGETHER</h3>
                             </div>
                             <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                                data-src="https://www.youtube.com/embed/walaaaaaaaaaaaaaa" data-target="#videoModal">
                                 <span></span>
                             </button>
                         </div>
@@ -82,7 +87,7 @@
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">LAST TOGETHER</h3>
                             </div>
                             <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                                data-src="https://www.youtube.com/embed/walaaaaaaaaaaaaaa" data-target="#videoModal">
                                 <span></span>
                             </button>
                         </div>
@@ -362,6 +367,15 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener('click', musicPlay);
+function musicPlay() {
+    document.getElementById('player').play();
+    document.removeEventListener('click', musicPlay);
+}
+        </script>
 </body>
 
 </html>
+
